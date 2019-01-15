@@ -354,7 +354,7 @@ window.onload = function() {
 
         screenshots.push( context );
     }
-    setInterval( addScreenshot, 100 );
+    setInterval( addScreenshot, 1000 );
 
 
     function drawScreenshots( ) {
