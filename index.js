@@ -26,6 +26,7 @@ $( function( ) {
 
     function showImage( ) {
         var image_holder = $( this );
+        
         var image = image_holder.find( 'img' );
         image.css( 'display', 'block' );
         setTimeout(function(){ 
@@ -234,25 +235,6 @@ window.onload = function() {
     var canvas58 = document.getElementById("canvas58");
     var context58 = canvas58.getContext("2d");
 
-    var canvas59 = document.getElementById("canvas59");
-    var context59 = canvas59.getContext("2d");
-
-    var canvas60 = document.getElementById("canvas60");
-    var context60 = canvas60.getContext("2d");
-
-    var canvas61 = document.getElementById("canvas61");
-    var context61 = canvas61.getContext("2d");
-
-    var canvas62 = document.getElementById("canvas62");
-    var context62 = canvas62.getContext("2d");
-
-    var canvas63 = document.getElementById("canvas63");
-    var context63 = canvas63.getContext("2d");
-
-    var canvas64 = document.getElementById("canvas64");
-    var context64 = canvas64.getContext("2d");
-
-
     var contexts = [ 
     context, 
     context2, 
@@ -311,13 +293,7 @@ window.onload = function() {
     context55, 
     context56, 
     context57, 
-    context58, 
-    context59, 
-    context60, 
-    context61, 
-    context62, 
-    context63, 
-    context64 ];
+    context58 ];
         
         
 	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;

@@ -61,15 +61,13 @@ body { overflow-y: auto }
 }
 
 .text h1 {     
-        float: left; 
-        position: absolute;
-        margin-top: 10px;
+        padding-top: 1em;
+        margin-bottom: 0.25em;
         font-family: 'GrotesqueMTStd', Arial;
         font-size: 30px;
         z-index: +2;
         color: #fff;
         mix-blend-mode: difference;
-        line-height: 0;
         text-decoration: underline;
 }
 
@@ -137,8 +135,10 @@ span[id^="anchor-" ] {
         position: relative;
         float: left;
         width: 40%;
-        z-index: +3;
+        z-index: 1001;
+        mix-blend-mode: difference;
 }
+.images:hover { mix-blend-mode: normal }
 
 .images div[id^="image-"] {
         position: absolute;
@@ -149,26 +149,37 @@ span[id^="anchor-" ] {
 }
 .images div[id^="image-"]:before {
         position: absolute;
-        top: 0; right: 0;
+        top: 0; right: 20;
         width: 30px;
         height: 30px;
         content: '';
         background-image: url('images/img_button.png');
         background-size: 100% 100%;
-        /*opacity: 0.5;*/
-        mix-blend-mode: difference;
         display: inline-block;
         z-index: +1;
 }
 
 .images div[id^="image-"] img {
-        float: right;
-        margin-right: -200px;
-        width: 800px;
-        height: 500px;
-        max-width: calc(100% - 20px);
-        display: none;
-        z-index: +3;
+    position: fixed;
+    top: 50%; left: 50%;
+
+    width: auto;
+    height: 100%;
+
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+
+    transform: translate(-50%,-50%);
+
+    display: none;
+    z-index: +3;
+}
+.images div[id^="image-"] img.portrait { 
+    width: 80%;
+    height: auto;
+
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
 }
 
 .cover {
@@ -204,7 +215,7 @@ span[id^="anchor-" ] {
   			height: 100%; 
   			width: 297mm;
   			page-break-after: always;
-  			font-family: 'GrotesqueMTStd', Arial;
+  			font-family: Arial;
         	font-size: 25px;
         	color: #ffff;
         	line-height: 1.3;
@@ -238,7 +249,7 @@ span[id^="anchor-" ] {
         	width: 49%;
         	height: 90%;
         	margin-left: 47%;
-        	font-family: 'GrotesqueMTStd', Arial;
+        	font-family: Arial;
         	font-size: 24px;
         	color: #ffff;
         	line-height: 1.3;
@@ -254,7 +265,8 @@ span[id^="anchor-" ] {
 
         .text h1 {     
 	        margin-top: 10px;
-	        font-family: 'GrotesqueMTStd', Arial;
+	        margin-bottom: 10px;
+	        font-family: Arial;
 	        font-size: 24px;
 	        line-height: 0;
 	        margin-right: 10px;
@@ -604,42 +616,6 @@ span[id^="anchor-" ] {
         }
 
         #canvas58 {
-            width: 45%;
-            margin-top: 25px;
-            display: block;
-        }
-
-        #canvas59 {
-            width: 45%;
-            margin-top: 25px;
-            display: block;
-        }
-
-        #canvas60 {
-            width: 45%;
-            margin-top: 25px;
-            display: block;
-        }
-
-        #canvas61 {
-            width: 45%;
-            margin-top: 25px;
-            display: block;
-        }
-
-        #canvas62 {
-            width: 45%;
-            margin-top: 25px;
-            display: block;
-        }
-
-        #canvas63 {
-            width: 45%;
-            margin-top: 25px;
-            display: block;
-        }
-
-        #canvas64 {
             width: 45%;
             margin-top: 25px;
             display: block;
